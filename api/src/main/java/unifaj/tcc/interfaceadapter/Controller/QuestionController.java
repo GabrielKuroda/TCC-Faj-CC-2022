@@ -8,7 +8,7 @@ import unifaj.tcc.domain.Question;
 import java.util.List;
 
 @RestController
-@RequestMapping("/question")
+@RequestMapping("/questions")
 @RequiredArgsConstructor
 public class QuestionController {
 

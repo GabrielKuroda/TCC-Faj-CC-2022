@@ -44,6 +44,36 @@ docker-compose -f misc/docker/docker-compose.yml up -d
 
 ```
 
+## Endpoints
+
+* Find all questions
+```
+localhost:8080/questions
+```
+
+* Find questions by difficulty
+```
+localhost:8080/questions/difficulty/{difficulty}
+```
+
+* Find questions by operation
+```
+localhost:8080/questions/operation/{operation}
+```
+
+* Insert Question
+```
+localhost:8080/addQuestion
+```
+To insert a question you need to pass the following body:
+```
+{
+"difficulty":"dificil",
+"operation" : "multiplicacao",
+"equation" : "2*5*9"
+}
+```
+
 ## Removing apllication and reset data on Mongo
 ```bash
 docker-compose -f misc/docker/docker-compose.yml down -v
