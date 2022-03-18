@@ -1,0 +1,9 @@
+unifaj/tcc/interfaceadapter/gateway/QuestionGatewayImpl.class
+unifaj/tcc/interfaceadapter/Controller/QuestionController.class
+unifaj/tcc/domain/Question$QuestionBuilder.class
+unifaj/tcc/businessrule/usecase/QuestionUseCase.class
+unifaj/tcc/businessrule/gateway/QuestionGateway.class
+unifaj/tcc/businessrule/usecase/QuestionUseCaseImpl.class
+unifaj/tcc/Application.class
+unifaj/tcc/domain/Question.class
+unifaj/tcc/interfaceadapter/repository/QuestionRepository.class

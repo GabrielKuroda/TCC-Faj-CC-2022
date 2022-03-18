@@ -1,0 +1,17 @@
+spring:
+  main:
+    banner-mode: "off"
+    lazy-initialization: false
+  application:
+    name: TCC CC - Forms Api
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:dev}
+
+mongo-properties:
+  url: ${MONGODB_URL:mongodb+srv://${mongo-properties.username}:${mongo-properties.password}@cluster0.jlzxm.mongodb.net/${mongo-properties.database}?}
+  #url: ${MONGODB_URL:mongodb+srv://${mongo-properties.username}:${mongo-properties.password}/${mongo-properties.database}}
+  #host: ${MONGO_HOST:localhost}
+  #port: ${MONGO_PORT:27017}
+  database: ${MONGO_DB:question}
+  username: ${MONGO_USER:tcc-cc-faj}
+  password: ${MONGO_USER:hjEMNlmSMLjwzzHL}

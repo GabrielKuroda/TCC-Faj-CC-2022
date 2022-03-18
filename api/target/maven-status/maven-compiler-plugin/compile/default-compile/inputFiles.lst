@@ -1,0 +1,8 @@
+/home/phenriquelongo/workspace/tcc/src/main/java/unifaj/tcc/interfaceadapter/Controller/QuestionController.java
+/home/phenriquelongo/workspace/tcc/src/main/java/unifaj/tcc/interfaceadapter/gateway/QuestionGatewayImpl.java
+/home/phenriquelongo/workspace/tcc/src/main/java/unifaj/tcc/Application.java
+/home/phenriquelongo/workspace/tcc/src/main/java/unifaj/tcc/interfaceadapter/repository/QuestionRepository.java
+/home/phenriquelongo/workspace/tcc/src/main/java/unifaj/tcc/domain/Question.java
+/home/phenriquelongo/workspace/tcc/src/main/java/unifaj/tcc/businessrule/gateway/QuestionGateway.java
+/home/phenriquelongo/workspace/tcc/src/main/java/unifaj/tcc/businessrule/usecase/QuestionUseCase.java
+/home/phenriquelongo/workspace/tcc/src/main/java/unifaj/tcc/businessrule/usecase/QuestionUseCaseImpl.java
