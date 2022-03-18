@@ -63,7 +63,7 @@ localhost:8080/questions/filter/operation/{operation}
 
 * Find questions by difficulty and operation
 ```
-localhost:8080/questions/{difficulty}/{operation}
+localhost:8080/questions/filter/{difficulty}/{operation}
 ```
 
 * Insert Question
