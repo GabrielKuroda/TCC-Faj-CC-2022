@@ -53,12 +53,17 @@ localhost:8080/questions
 
 * Find questions by difficulty
 ```
-localhost:8080/questions/difficulty/{difficulty}
+localhost:8080/questions/filter/difficulty/{difficulty}
 ```
 
 * Find questions by operation
 ```
-localhost:8080/questions/operation/{operation}
+localhost:8080/questions/filter/operation/{operation}
+```
+
+* Find questions by difficulty and operation
+```
+localhost:8080/questions/{difficulty}/{operation}
 ```
 
 * Insert Question
@@ -70,7 +75,8 @@ To insert a question you need to pass the following body:
 {
 "difficulty":"dificil",
 "operation" : "multiplicacao",
-"equation" : "2*5*9"
+"equation" : "2*5*9",
+"answer" : "90"
 }
 ```
 
@@ -80,5 +86,5 @@ docker-compose -f misc/docker/docker-compose.yml down -v
 ```
 
 - Mongo Express ([mongo-express](http://localhost:8086 "mongo-express"))
-    - user: 'dev', pwd: 'dev!'
+    - user: 'dev', pwd: 'dev!' or user: 'admin', pwd: 'dev!'
     - Note: To access Mongo, it's not necessary run the application, just the Docker.

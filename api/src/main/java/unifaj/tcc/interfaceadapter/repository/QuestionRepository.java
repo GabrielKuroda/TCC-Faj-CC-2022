@@ -11,4 +11,6 @@ public interface QuestionRepository extends MongoRepository<Question, String> {
     List<Question> findByDifficulty(String difficulty);
 
     List<Question> findByOperation(String operation);
+
+    List<Question> findByDifficultyAndOperation(String difficulty, String operation);
 }

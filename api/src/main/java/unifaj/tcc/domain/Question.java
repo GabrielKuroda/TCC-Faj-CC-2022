@@ -14,4 +14,5 @@ public class Question {
     private String difficulty;
     private String operation;
     private String equation;
+    private String answer;
 }

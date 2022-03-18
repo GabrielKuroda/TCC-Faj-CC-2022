@@ -11,5 +11,7 @@ public interface QuestionGateway {
 
     List<Question> findAll();
 
+    List<Question> findByDifficultyAndOperation(final String difficulty, final String operation);
+
     Question saveQuestion(final Question question);
 }

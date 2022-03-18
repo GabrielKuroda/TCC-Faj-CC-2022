@@ -30,6 +30,11 @@ public class QuestionGatewayImpl implements QuestionGateway {
     }
 
     @Override
+    public List<Question> findByDifficultyAndOperation(String difficulty, String operation) {
+        return questionRepository.findByDifficultyAndOperation(difficulty, operation);
+    }
+
+    @Override
     public Question saveQuestion(Question question) {
         return questionRepository.save(question);
     }

@@ -14,14 +14,19 @@ public class QuestionController {
 
     private final QuestionUseCase questionUseCase;
 
-    @GetMapping("/difficulty/{difficulty}")
+    @GetMapping("/filter/difficulty/{difficulty}")
     public List<Question> findQuestionByDifficulty(@PathVariable String difficulty) {
         return questionUseCase.findQuestionByDifficulty(difficulty);
     }
 
-    @GetMapping("/operation/{operation}")
+    @GetMapping("/filter/operation/{operation}")
     public List<Question> findQuestionByOperation(@PathVariable String operation) {
         return questionUseCase.findQuestionByOperation(operation);
+    }
+
+    @GetMapping("/filter/{difficulty}/{operation}")
+    public List<Question> findByDifficultyAndOperation(@PathVariable String difficulty, @PathVariable String operation) {
+        return questionUseCase.findByDifficultyAndOperation(difficulty, operation);
     }
 
     @GetMapping("")

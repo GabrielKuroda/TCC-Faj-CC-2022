@@ -12,5 +12,7 @@ public interface QuestionUseCase {
 
     Question saveQuestion(final Question question);
 
+    List<Question> findByDifficultyAndOperation(final String difficulty, final String operation);
+
     List<Question> findAll();
 }

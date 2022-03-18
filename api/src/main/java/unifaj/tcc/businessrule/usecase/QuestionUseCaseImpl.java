@@ -29,6 +29,11 @@ public class QuestionUseCaseImpl implements QuestionUseCase {
     }
 
     @Override
+    public List<Question> findByDifficultyAndOperation(String difficulty, String operation) {
+        return gateway.findByDifficultyAndOperation(difficulty, operation);
+    }
+
+    @Override
     public Question saveQuestion(Question question) {
         return gateway.saveQuestion(question);
     }
