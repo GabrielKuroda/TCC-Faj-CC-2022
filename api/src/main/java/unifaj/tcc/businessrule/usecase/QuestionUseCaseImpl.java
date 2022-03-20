@@ -2,6 +2,8 @@ package unifaj.tcc.businessrule.usecase;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 import unifaj.tcc.businessrule.gateway.QuestionGateway;
 import unifaj.tcc.domain.Question;
 
@@ -14,27 +16,27 @@ public class QuestionUseCaseImpl implements QuestionUseCase {
     private final QuestionGateway gateway;
 
     @Override
-    public List<Question> findQuestionByDifficulty(String difficulty) {
+    public Flux<Question> findQuestionByDifficulty(String difficulty) {
         return gateway.findByDifficulty(difficulty);
     }
 
     @Override
-    public List<Question> findQuestionByOperation(String operation) {
+    public Flux<Question> findQuestionByOperation(String operation) {
         return gateway.findByOperation(operation);
     }
 
     @Override
-    public List<Question> findAll() {
+    public Flux<Question> findAll() {
         return gateway.findAll();
     }
 
     @Override
-    public List<Question> findByDifficultyAndOperation(String difficulty, String operation) {
+    public Flux<Question> findByDifficultyAndOperation(String difficulty, String operation) {
         return gateway.findByDifficultyAndOperation(difficulty, operation);
     }
 
     @Override
-    public Question saveQuestion(Question question) {
+    public Mono<Question> saveQuestion(Question question) {
         return gateway.saveQuestion(question);
     }
 }
