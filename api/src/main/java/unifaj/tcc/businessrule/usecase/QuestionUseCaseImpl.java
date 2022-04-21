@@ -2,10 +2,12 @@ package unifaj.tcc.businessrule.usecase;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import unifaj.tcc.businessrule.exception.QuestionException;
 import unifaj.tcc.businessrule.gateway.QuestionGateway;
 import unifaj.tcc.domain.Question;
 
 import java.util.List;
+import java.util.Objects;
 
 @Service
 @RequiredArgsConstructor
@@ -35,6 +37,18 @@ public class QuestionUseCaseImpl implements QuestionUseCase {
 
     @Override
     public Question saveQuestion(Question question) {
+
+        Question question1 = gateway.findByEquation(question.getEquation());
+
+        if(!Objects.isNull(question1) && question1.getEquation().equalsIgnoreCase(question.getEquation())) {
+            throw new QuestionException();
+        }
+
         return gateway.saveQuestion(question);
+    }
+
+    @Override
+    public Question findByEquation(String equation) {
+        return gateway.findByEquation(equation);
     }
 }

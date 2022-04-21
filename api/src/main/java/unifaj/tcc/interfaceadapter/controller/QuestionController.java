@@ -1,4 +1,4 @@
-package unifaj.tcc.interfaceadapter.Controller;
+package unifaj.tcc.interfaceadapter.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -36,6 +36,7 @@ public class QuestionController {
 
     @PostMapping("/addQuestion")
     public Question saveQuestion(@RequestBody Question question) {
+
         return questionUseCase.saveQuestion(question);
     }
 }

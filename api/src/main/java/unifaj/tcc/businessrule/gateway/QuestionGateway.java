@@ -9,6 +9,8 @@ public interface QuestionGateway {
 
     List<Question> findByOperation(final String operation);
 
+    Question findByEquation(final String equation);
+
     List<Question> findAll();
 
     List<Question> findByDifficultyAndOperation(final String difficulty, final String operation);

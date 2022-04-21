@@ -14,4 +14,4 @@ mongo-properties:
   #port: ${MONGO_PORT:27017}
   database: ${MONGO_DB:question}
   username: ${MONGO_USER:tcc-cc-faj}
-  password: ${MONGO_USER:hjEMNlmSMLjwzzHL}
+  password: ${MONGO_USER:HmRW6yFdfVJ69GLy}

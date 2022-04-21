@@ -25,6 +25,11 @@ public class QuestionGatewayImpl implements QuestionGateway {
     }
 
     @Override
+    public Question findByEquation(String equation) {
+        return questionRepository.findByEquation(equation);
+    }
+
+    @Override
     public List<Question> findAll() {
         return questionRepository.findAll();
     }

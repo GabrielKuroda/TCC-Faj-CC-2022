@@ -12,6 +12,8 @@ public interface QuestionUseCase {
 
     Question saveQuestion(final Question question);
 
+    Question findByEquation(final String equation);
+
     List<Question> findByDifficultyAndOperation(final String difficulty, final String operation);
 
     List<Question> findAll();
