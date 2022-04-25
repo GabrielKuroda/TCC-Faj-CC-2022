@@ -1,19 +1,18 @@
 package unifaj.tcc.businessrule.gateway;
 
-import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
 import unifaj.tcc.domain.Question;
-
 import java.util.List;
 
 public interface QuestionGateway {
-    Flux<Question> findByDifficulty(final String difficulty);
+    List<Question> findByDifficulty(final String difficulty);
 
-    Flux<Question> findByOperation(final String operation);
+    List<Question> findByOperation(final String operation);
 
-    Flux<Question> findAll();
+    Question findByEquation(final String equation);
 
-    Flux<Question> findByDifficultyAndOperation(final String difficulty, final String operation);
+    List<Question> findAll();
 
-    Mono<Question> saveQuestion(final Question question);
+    List<Question> findByDifficultyAndOperation(final String difficulty, final String operation);
+
+    Question saveQuestion(final Question question);
 }

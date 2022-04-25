@@ -37,7 +37,7 @@
 
 ## Running apllication
 
-```bash
+```
 docker-compose -f misc/docker/docker-compose.yml up -d
 
 ./mvnw spring-boot:run # or via ide
@@ -68,7 +68,7 @@ localhost:8080/questions/filter/{difficulty}/{operation}
 
 * Insert Question
 ```
-localhost:8080/addQuestion
+localhost:8080/questions/addQuestion
 ```
 To insert a question you need to pass the following body:
 ```
