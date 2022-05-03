@@ -91,6 +91,13 @@ function insertQuestion() {
                 limparAddQuestion();
                 showPage('page_add_question');
 			}
+
+            if (this.readyState == 4 && this.status == 400) {
+                var resp = JSON.parse(this.responseText);
+                alert(resp.errors[0].detail);
+                limparAddQuestion();
+                showPage('page_add_question');
+			}
 		};
 		xhttp.open("POST", urlQuestions + "/addQuestion", true);
 		xhttp.setRequestHeader("Content-Type", "application/json");
