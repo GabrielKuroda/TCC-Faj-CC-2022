@@ -27,7 +27,7 @@ let urlQuestions = "http://localhost:8080/questions"
         url = urlQuestions + "/filter/" + difficulty_filter + "/" + operation_filter
     }else if(difficulty_filter != "all"){
         url = urlQuestions + "/filter/difficulty/" + difficulty_filter
-    }else if(difficulty_filter != "all"){
+    }else if(operation_filter != "all"){
         url = urlQuestions + "/filter/operation/" + operation_filter
     }else{
         url = urlQuestions
